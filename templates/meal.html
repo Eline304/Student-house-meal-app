@@ -1,0 +1,97 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<div class="content">
+    <section>
+        <h2>
+            Meal {{ meal.date }}
+        </h2>
+        <div class="meal-info">
+            <div>
+                {% if not meal.cook %}
+                <form action="{{ url_for('cook', meal_id=meal.id) }}" method="POST">
+                    {{ cook_form.hidden_tag() }}
+                    {{ cook_form.submit() }}
+                </form>
+                {% endif %}
+                {% if meal.cook %}
+                <p>Cook: </p>
+                <div class="cook-info">
+                    <p>{{ meal.cook.username }}</p>
+                </div>
+                {% endif %}
+            </div>
+            {% if not meal.photo_filename %}
+            <div>
+                <p>Participants: </p>
+                <div class="participants">
+                    {% for participant in meal.participants %}
+                    <p>{{ participant.username }}</p>
+                    {% endfor %}
+                    {% if current_user in meal.participants %}
+                    <form action="{{ url_for('unparticipate', meal_id=meal.id) }}" method="POST">
+                        {{ unparticipate_form.hidden_tag() }}
+                        {{ unparticipate_form.submit() }}
+                    </form>
+                    {% else %}
+                    <form action="{{ url_for('participate', meal_id=meal.id) }}" method="POST">
+                        {{ participate_form.hidden_tag() }}
+                        {{ participate_form.submit() }}
+                    </form>
+                    {% endif %}
+
+                </div>
+            </div>
+            {% endif %}
+            <div>
+                <p>
+                    Receipt:
+                </p>
+                <div>
+                    {% if meal and meal.photo_filename %}
+                    <img src="{{ url_for('uploaded_file', filename=meal.photo_filename) }}" width="200">
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+        {% if current_user == meal.cook %}
+        <form action="/meal/{{ meal.id }}" method="POST" novalidate enctype="multipart/form-data">
+            {{ form.hidden_tag() }}
+            <p>
+                {{ form.description.label }}
+                {{ form.description }}
+                {% for error in form.description.errors %}
+                <span class="error">
+                    {{ error }}
+                </span><br>
+                {% endfor %}
+            </p>
+            <p>
+                {{ form.expenses.label }}
+                {{ form.expenses }}
+                {% for error in form.expenses.errors %}
+                <span class="error">
+                    {{ error }}
+                </span><br>
+                {% endfor %}
+            </p>
+
+            <p>
+                {{ form.photo.label }} <br>
+                {{ form.photo }}
+                {% for error in form.photo.errors %}
+                <span class="error">{{ error }}</span><br>
+                {% endfor %}
+            </p>
+
+            <p>
+                {{ form.submit() }}
+            </p>
+        </form>
+        {% endif %}
+    </section>
+</div>
+
+{% endblock %}

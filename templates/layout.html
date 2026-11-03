@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="initial-scale=1, width=device-width">
+    <title>Bugs</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <header>
+        <a href="/">
+            <h1>Huize brak</h1>
+        </a>
+        {% if session.user %}
+        <a href="/logout">
+            <h1>Logout</h1>
+        </a>
+        {% endif %}
+
+    </header>
+
+    {% block body %}
+    {% endblock %}
+
+
+</body>
+
+</html>

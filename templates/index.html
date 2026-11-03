@@ -1,0 +1,96 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<div class="content">
+    <section>
+        <h2>
+            Meals
+        </h2>
+        <table>
+            <tr class="column-names">
+                <td>
+                    Date
+                </td>
+                <td>
+                    Description
+                </td>
+                <td>
+                    Cook
+                </td>
+                <td>
+                    Number of participants
+                </td>
+                <td>
+                    Price per person
+                </td>
+            </tr>
+            {% for meal in meals%}
+            <tr>
+                <td>
+                    <a href="/meal/{{ meal.id }}">
+                        {{ meal.date }}
+                    </a>
+                </td>
+                <td>
+                    {% if meal.description %}
+                    {{ meal.description }}
+                    {% else %}
+
+                    {% endif %}
+                </td>
+                <td>
+                    {% if meal.cook %}
+                    {{ meal.cook.username }}
+                    {% else %}
+
+                    {% endif %}
+                </td>
+                <td>
+                    {% if meal.participants %}
+                    {{ meal.participants|length }}
+                    {% else %}
+                    0
+                    {% endif %}
+                </td>
+                <td>
+                    {% if meal.expenses and meal.participants|length > 0 %}
+                    €{{ (meal.expenses / meal.participants|length)|round(2) }}
+                    {% else %}
+                    €0
+                    {% endif %}
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+    </section>
+
+    <section>
+        <h2>
+            Balances
+        </h2>
+        <table>
+            <tr class="column-names">
+                <td>
+                    Name
+                </td>
+                <td>
+                    Cooking
+                </td>
+                <td>
+                    Expenses
+                </td>
+            </tr>
+            {% for user in users %}
+            <tr>
+                <td>{{ user.username }}</td>
+                <td>{{ user.get_cooking_balance() }}</td>
+                <td>€{{ user.get_expenses_balance() }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </section>
+</div>
+
+
+{% endblock %}
