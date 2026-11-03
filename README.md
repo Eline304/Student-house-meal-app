@@ -7,7 +7,7 @@
 ## Screenshots
 
 <details>
-<summary>🖥️ Bekijk Desktop Screenshots</summary>
+<summary>🖥️ Desktop Screenshots</summary>
 
 ### Home & Trips Overview
 ![Login](assets/.png)
