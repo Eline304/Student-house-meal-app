@@ -27,24 +27,24 @@
     
 #### User Management
 
-    User registration and login.
-    User authentication and session management.
-    Personal accounts for students.
+        User registration and login.
+        User authentication and session management.
+        Personal accounts for students.
 
 #### Meal Management
 
-    Browse available meals by date.
-    Sign up to cook for a meal.
-    View individual meal pages.
-    See which students have signed up.
-    Close registrations when a receipt has been uploaded.
+        Browse available meals by date.
+        Sign up to cook for a meal.
+        View individual meal pages.
+        See which students have signed up.
+        Close registrations when a receipt has been uploaded.
 
 #### Expense Management
 
-    Track the costs of shared meals.
-    Calculate the total expenses.
-    Keep track of the balance between participants.
-    Calculate who owes what.
+        Track the costs of shared meals.
+        Calculate the total expenses.
+        Keep track of the balance between participants.
+        Calculate who owes what.
 
 #### Email Functionality
        Email functionality implemented using Ethereal Email for development and testing purposes.
@@ -59,9 +59,9 @@
 
 ## Project Structure
         
-    The application is organised into 13 Vue components, multiple composables and views.
-    
-    This structure helps separate responsibilities and keeps the application organised and maintainable.
+        The application is organised into 13 Vue components, multiple composables and views.
+        
+        This structure helps separate responsibilities and keeps the application organised and maintainable.
 
 ## What I Learned
 
@@ -135,4 +135,4 @@
 
 ## Development
 
-    Independently developed as a school assignment focused on backend development, database integration, form handling, ORM and secure web application development.
+        Independently developed as a school assignment focused on backend development, database integration, form handling, ORM and secure web application development.
