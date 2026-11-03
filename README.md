@@ -10,7 +10,7 @@
 <summary> Desktop Screenshots</summary>
 
 ### Home & Trips Overview
-![Login](assets/.png)
+![Login](assets/login.png)
 
 ### Sign up to cook
 ![Meal page empty](assets/cook.png)
