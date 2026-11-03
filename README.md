@@ -83,54 +83,54 @@
     - Git.
 
 #### Installation
-        
-    1. Clone the repository:
-       ```bash
-       git clone https://github.com/Eline304/Student-house-meal-app.git
-       ```
-    2. Navigate to the project directory:
-       ```bash
-       cd cooking-app
-       ```
-    3. Create a virtual environment
-       ```bash
-       python -m venv venv
-       ```
-    4. Activate the virtual environment
-        Windows
-       ```bash
-       venv\Scripts\activate
-       ```
-        Max/Linux
-        ```bash
-       source venv/bin/activate
-       ```
-    5. Install the dependencies
-        ```bash
-       pip install -r requirements.txt
-       ```
-    6. Start the flask application
-        ```bash
-       flask --app app run
-       ```
-    Navigate to the application in your browser: http://127.0.0.1:5000
 
-    7. Use Ethereal mail
-        ```bash
-       Email Testing with Ethereal
+1. Clone the repository:
+```bash
+git clone https://github.com/Eline304/Student-house-meal-app.git
+```
+2. Navigate to the project directory:
+```bash
+cd cooking-app
+```
+3. Create a virtual environment
+```bash
+python -m venv venv
+```
+4. Activate the virtual environment
+Windows
+```bash
+venv\Scripts\activate
+```
+Max/Linux
+```bash
+source venv/bin/activate
+```
+5. Install the dependencies
+```bash
+pip install -r requirements.txt
+```
+6. Start the flask application
+```bash
+flask --app app run
+```
+Navigate to the application in your browser: http://127.0.0.1:5000
 
-        This application uses Ethereal Email as a test SMTP service for sending login links.
+7. Use Ethereal mail
+```bash
+Email Testing with Ethereal
 
-        The SMTP configuration is defined in the application's send_email() function.
+This application uses Ethereal Email as a test SMTP service for sending login links.
 
-        To view emails sent by the application:
+The SMTP configuration is defined in the application's send_email() function.
 
-            Visit Ethereal Email.
-            Log in using the Ethereal test credentials configured in the application.
-            Open the inbox to view captured emails.
+To view emails sent by the application:
 
-        Emails sent through Ethereal are not delivered to real recipients.
-       ```
+    Visit Ethereal Email.
+    Log in using the Ethereal test credentials configured in the application.
+    Open the inbox to view captured emails.
+
+Emails sent through Ethereal are not delivered to real recipients.
+```
     
 
 ## Development
