@@ -135,4 +135,4 @@ Emails sent through Ethereal are not delivered to real recipients.
 
 ## Development
 
-        Independently developed as a school assignment focused on backend development, database integration, form handling, ORM and secure web application development.
+        Independently developed as a school assignment focused on creating secure web applications.
