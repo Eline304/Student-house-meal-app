@@ -6,6 +6,9 @@ Students can browse meals by date, sign-up to cook, join available meals and vie
 
 ## Screenshots
 
+![Meal page empty](assets/expenses.png)
+
+
 <details>
 <summary> Desktop Screenshots</summary>
 
