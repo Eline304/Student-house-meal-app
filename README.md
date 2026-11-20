@@ -109,6 +109,7 @@ Navigate to the application in your browser: http://127.0.0.1:5000
 5. Use Ethereal mail
 ```bash
 Email Testing with Ethereal
+```
 
 This application uses Ethereal Email as a test SMTP service for sending login links.
 
