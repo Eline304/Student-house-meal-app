@@ -95,30 +95,18 @@ git clone https://github.com/Eline304/Student-house-meal-app.git
 ```bash
 cd cooking-app
 ```
-3. Create a virtual environment
-```bash
-python -m venv venv
 ```
-4. Activate the virtual environment
-Windows
+3. Install the dependencies
 ```bash
-venv\Scripts\activate
+poetry install
 ```
-Max/Linux
+4. Start the flask application
 ```bash
-source venv/bin/activate
-```
-5. Install the dependencies
-```bash
-pip install -r requirements.txt
-```
-6. Start the flask application
-```bash
-flask --app app run
+poetry run flask --app app run
 ```
 Navigate to the application in your browser: http://127.0.0.1:5000
 
-7. Use Ethereal mail
+5. Use Ethereal mail
 ```bash
 Email Testing with Ethereal
 
