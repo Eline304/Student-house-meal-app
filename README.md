@@ -95,7 +95,6 @@ git clone https://github.com/Eline304/Student-house-meal-app.git
 ```bash
 cd cooking-app
 ```
-```
 3. Install the dependencies
 ```bash
 poetry install
